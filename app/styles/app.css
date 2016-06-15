@@ -1,0 +1,38 @@
+body{
+  background-color: #8c18ff;
+}
+input[type=text]:focus:not([readonly]) {
+     border-bottom: 1px solid #ff5218;
+     box-shadow: 0 1px 0 0 #ff5218;
+}
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #ff5218;
+    box-shadow: 0 1px 0 0 #ff5218;
+}
+textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: #ff5218;
+}
+input[type=text]:focus:not([readonly]) + label {
+  color: #ff5218;
+}
+.input-field label:focus {
+  color: #ff5218;
+}
+.input-field .prefix.active {
+  color: #ff5218;
+}
+.myform{
+  margin: 5em auto 0 auto;
+  padding: 2em;
+}
+.myrow{
+  margin-top: 3em;
+}
+nav{
+  height: 6em;
+}
+.add{
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}

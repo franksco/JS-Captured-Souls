@@ -1,0 +1,27 @@
+<form class="white myform">
+      <div class="input-field">
+        <i class="material-icons prefix">label</i>
+        {{input autofocus="true" value=itemname id="itemname" type="text"}}
+         <label for="itemname">Item Name</label>
+      </div>
+
+      <div class="input-field">
+        <i class="material-icons prefix">comment</i>
+        {{input value=description id="description" type="text"}}
+         <label for="description">Description</label>
+      </div>
+
+      <div class="input-field">
+        <i class="material-icons prefix">attach_money</i>
+        {{input value=price id="price" type="text"}}
+        <label for="price">Price</label>
+      </div>
+
+      <div class="input-field">
+        <i class="material-icons prefix">image</i>
+        {{input value=image id="image" type="text"}}
+        <label for="image">Image URL</label>
+      </div>
+
+      <button class="waves-effect waves-light btn-large amber darken-2 hoverable" {{action 'save'}}>Save</button>
+    </form>

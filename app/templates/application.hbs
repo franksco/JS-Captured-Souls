@@ -1,0 +1,31 @@
+<header>
+<div class="navbar-fixed">
+  <nav class="cyan accent-3 z-depth-3">
+    <div class="nav-wrapper valign-wrapper">
+      <div class="container valign">
+        <a class="brand-logo center">Captured Souls</a>
+         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li>{{#link-to 'index'}}<i class="material-icons">home</i>{{/link-to}}</li>
+        </ul>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li>{{#link-to 'new-item'}}<i class="material-icons">add</i>{{/link-to}}</li>
+          {{log cartTotal}}
+          <li>{{#link-to 'cart'}}<i class="material-icons">shopping_cart</i>{{/link-to}}</li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li>{{#link-to 'index'}}<i class="material-icons">home</i>{{/link-to}}</li>
+          <li>{{#link-to 'new-item'}}<i class="material-icons">add</i>{{/link-to}}</li>
+          <li>{{#link-to 'cart'}}<i class="material-icons">shopping_cart</i>{{/link-to}}</li>
+       </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+</header>
+
+<main>
+  <div class="container">
+    {{outlet}}
+  </div>
+</main>
