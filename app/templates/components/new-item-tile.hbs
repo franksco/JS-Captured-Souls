@@ -1,4 +1,4 @@
-<form class="white myform">
+<form class="white myform z-depth-4">
       <div class="input-field">
         <i class="material-icons prefix">label</i>
         {{input autofocus="true" value=itemname id="itemname" type="text"}}
@@ -7,14 +7,20 @@
 
       <div class="input-field">
         <i class="material-icons prefix">comment</i>
-        {{input value=description id="description" type="text"}}
-         <label for="description">Description</label>
+        {{textarea value=description id="description" class="materialize-textarea" type="text"}}
+        <label for="description">Description</label>
       </div>
 
       <div class="input-field">
         <i class="material-icons prefix">attach_money</i>
         {{input value=price id="price" type="text"}}
         <label for="price">Price</label>
+      </div>
+
+      <div class="input-field">
+        <i class="material-icons prefix">equalizer</i>
+        {{input value=stock id="stock" type="text"}}
+        <label for="stock">Amount of Product</label>
       </div>
 
       <div class="input-field">

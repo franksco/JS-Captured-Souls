@@ -6,8 +6,14 @@ export default Ember.Service.extend({
   add(item){
     this.get('items').pushObject(item);
   },
-  count(){
-    Ember.Logger.log("hey");
-    return this.items.length;
+  remove(item){
+    this.get('items').removeObject(item);
+  },
+  total(){
+    var i = 0;
+    this.items.forEach(function(item){
+      i += parseInt(item.get('price'));
+    });
+    return i;
   }
 });

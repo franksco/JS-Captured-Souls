@@ -1,18 +1,41 @@
-<div class="col m4">
-  <div class="card medium">
+<div class="col l4">
+  {{#if (gt item.stock 0)}}
+  <div class="card medium enabled">
     <div class="card-image waves-effect waves-block waves-light square">
       <img class="activator" src={{item.image}}>
     </div>
     <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">{{item.itemname}}<i class="material-icons right">more_vert</i></span>
+      <span class="card-title activator grey-text text-darken-4 truncate">{{item.itemname}}<i class="material-icons right">more_vert</i></span>
       <p>{{item.timestamp}}</p>
+      <p class="stock">{{commafy item.stock}}</p>
       <a class="material-icons right add" {{action 'addToCart' item}}>add_shopping_cart</a>
     </div>
-    <div class="card-reveal">
+    <div class="card-reveal mycolor">
       <span class="card-title grey-text text-darken-4">{{item.itemname}}<i class="material-icons right">close</i></span>
       <p>{{item.description}}</p>
-      <p>${{item.price}}</p>
-      <a class="material-icons right add" {{action 'addToCart' item}}>add_shopping_cart</a>
+      <p>${{commafy item.price}}</p>
+      <p class="stock">{{commafy item.stock}}</p>
+      <a class="right" {{action 'addToCart' item}}><span class="material-icons add">add_shopping_cart</span></a>
     </div>
   </div>
+  {{else}}
+  <div class="card medium blur">
+    <div class="card-image waves-effect waves-block waves-light square">
+      <img class="activator" src={{item.image}}>
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4 truncate">{{item.itemname}}<i class="material-icons right">more_vert</i></span>
+      <p>{{item.timestamp}}</p>
+      <p class="stock">{{commafy item.stock}}</p>
+      <a class="right"><span class="material-icons add-disabled">add_shopping_cart</span></a>
+    </div>
+    <div class="mycolor card-reveal">
+      <span class="card-title grey-text text-darken-4">{{item.itemname}}<i class="material-icons right">close</i></span>
+      <p>{{item.description}}</p>
+      <p>${{commafy item.price}}</p>
+      <p class="stock">{{commafy item.stock}}</p>
+      <a class="right"><span class="material-icons add-disabled">add_shopping_cart</span></a>
+    </div>
+  </div>
+  {{/if}}
 </div>

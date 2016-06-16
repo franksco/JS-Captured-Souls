@@ -5,5 +5,8 @@ export default Ember.Controller.extend({
 
   cartTotal: Ember.computed(function(){
       return this.get('shoppingCart.items.[]').length;
-    })
+    }),
+    totalNew: Ember.observer('shoppingCart.length', function(){
+      this.set('cartTotal', this.get('shoppingCart.items.length'));
+    }),
 });
