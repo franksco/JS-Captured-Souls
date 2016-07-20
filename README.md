@@ -1,7 +1,6 @@
 # Captured-souls
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A Store web app where people can post things to sell and others can buy them.
 
 ## Prerequisites
 
